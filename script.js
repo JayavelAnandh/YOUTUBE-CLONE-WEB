@@ -29,7 +29,7 @@ function renderVideos(datum){  //function to display results of video/playlist  
         <h5 class="card-title">${datum.snippet.title}</h5>
         <h3><p class="card-text">${datum.snippet.channelTitle}</p></h3>
         
-        <button type="button" onclick="playlistcreate()" value="https://www.youtube.com/embed/${datum.id.videoId}?enablejsapi=1" class="Addtoplaylist">Add to Playlist</button>
+        <button type="button" onclick="playlistcreate()" value="https://www.youtube.com/embed/${datum.id.videoId}?enablejsapi=1" class="Addtoplaylist btn btn-primary">Add to Playlist</button>
         <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
         Channel-Info
         </button>

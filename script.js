@@ -46,24 +46,24 @@ function renderVideos(datum){  //function to display results of video/playlist  
 }
 
 
-// document.querySelector("#searchGo").addEventListener("click",()=>{  //event to show results
-//     VideoSeater.innerHTML=""
-//     let Usersearch = document.querySelector("#searchbar").value;
-//     const SearchUrl = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=6&key=AIzaSyDnsn3roe6g6MTdBGwnFCRxfbXDlb0771k&q=${Usersearch}`
-//     fetch(SearchUrl)
-//     .then((response)=>response.json())
-//     .then((data)=>{
-//         console.log(data)
-//         const videos = data.items;
+document.querySelector("#searchGo").addEventListener("click",()=>{  //event to show results
+    VideoSeater.innerHTML=""
+    let Usersearch = document.querySelector("#searchbar").value;
+    const SearchUrl = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=6&key=AIzaSyDnsn3roe6g6MTdBGwnFCRxfbXDlb0771k&q=${Usersearch}`
+    fetch(SearchUrl)
+    .then((response)=>response.json())
+    .then((data)=>{
+        console.log(data)
+        const videos = data.items;
 
         
-//         for(var i of videos){
-//             renderVideos(i);
-//         }
-//     })
+        for(var i of videos){
+            renderVideos(i);
+        }
+    })
     
-//     .catch((error)=>console.log(error))
-// })
+    .catch((error)=>console.log(error))
+})
 
 /////search function was done
 //// info was also done with the same request

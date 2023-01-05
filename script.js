@@ -23,7 +23,7 @@ function renderVideos(datum){  //function to display results of video/playlist  
     <div class="card" >
         
         <iframe id="existing-iframe-example"
-        src=""
+        src="https://www.youtube.com/embed/${datum.id.videoId}?enablejsapi=1"
         frameborder="0"></iframe>
         <div class="card-body">
         <h5 class="card-title">${datum.snippet.title}</h5>

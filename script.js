@@ -1,5 +1,5 @@
 let count = 0;
-function playlistcreate (){
+function playlistcreate(){
     let Elementlink =document.querySelector(".Addtoplaylist").value
 
     let linkcover = document.createElement("div")
@@ -27,10 +27,10 @@ function renderVideos(datum){  //function to display results of video/playlist  
         frameborder="0"></iframe>
         <div class="card-body">
         <h5 class="card-title">${datum.snippet.title}</h5>
-        <p class="card-text">${datum.snippet.channelTitle}</p>
+        <h3><p class="card-text">${datum.snippet.channelTitle}</p></h3>
         
-        <button type="button" onclick="playlistcreate ()" value="https://www.youtube.com/embed/${datum.id.videoId}?enablejsapi=1" class="Addtoplaylist">Add to Playlist</button>
-        <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+        <button type="button" onclick="playlistcreate()" value="https://www.youtube.com/embed/${datum.id.videoId}?enablejsapi=1" class="Addtoplaylist">Add to Playlist</button>
+        <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
         Channel-Info
         </button>
         <div class="dropdown-menu">

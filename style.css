@@ -4,6 +4,8 @@
     border-radius: 20px;
     margin-bottom: 2rem;
     background-color: whitesmoke;
+    transition: transform .75s;
+    transition-delay: .5s;
 }
 iframe{
     width: 100%;
@@ -18,13 +20,44 @@ iframe{
 .dropdown-menu{
     width: 300px;
     overflow:scroll;
+    scroll-behavior: smooth;
+
 }
 
-body{
-    background-color: rgb(115, 201, 201);
-}
+
 .playbar{
     border-radius: 10px;
     height: 400px;
     background-color: beige;
 }
+.card-body{
+    overflow: visible;
+}
+body::-webkit-scrollbar {
+    width: 1em;
+  }
+   
+  body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+   
+  body::-webkit-scrollbar-thumb {
+    background-color:red;
+    outline: 2px solid white;
+  }
+  .container{
+    background-color: rgb(247, 236, 236);
+  }
+  .dropdown{
+    display: inline;
+  }
+  .mbar{
+    font-weight: 200;
+  }
+ #searchbar{
+    border-radius: 50px;
+ }
+
+ .card:hover{
+    transform: scale(1.15);
+ }

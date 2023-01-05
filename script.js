@@ -67,13 +67,3 @@ document.querySelector("#searchGo").addEventListener("click",()=>{  //event to s
 /////search function was done
 //// info was also done with the same request
 
-let playlist_Url="https://www.googleapis.com/youtube/v3/playlists?part-id%2Csnippet&key=AIzaSyDnsn3roe6g6MTdBGwnFCRxfbXDlb0771k"///its separate for playlist matum
-
-fetch(playlist_Url,{
-    method:"POST",
-    headers:{
-        "Content-Type": "application/json",
-    }
-})
-.then((response)=>response.json())
-.then((data)=>console.log(data))

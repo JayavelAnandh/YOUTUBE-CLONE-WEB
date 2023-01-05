@@ -19,21 +19,12 @@ iframe{
     width: 300px;
     overflow:scroll;
 }
-#signin{
-    display: inline ;
-}
-#signout{
-    display: inline;
-}
-#instructions{
-    font-size: x-small;
-    color: rgb(18, 178, 241);
-}
-.infos{
-    color: rgb(18, 178, 241);
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: bisque;
-}
+
 body{
     background-color: rgb(115, 201, 201);
+}
+.playbar{
+    border-radius: 10px;
+    height: 400px;
+    background-color: beige;
 }

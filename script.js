@@ -1,17 +1,18 @@
-function onSignIn(googleUser) {
-    var profile = googleUser.getBasicProfile();
-    console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-    console.log('Name: ' + profile.getName());
-    console.log('Image URL: ' + profile.getImageUrl());
-    console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-  }
+let count = 0;
+function playlistcreate (){
+    let Elementlink =document.querySelector(".Addtoplaylist").value
 
-  function signOut() {
-    var auth2 = gapi.auth2.getAuthInstance();
-    auth2.signOut().then(function () {
-      console.log('User signed out.');
-    });
-  }
+    let linkcover = document.createElement("div")
+    document.querySelector("#Playlist").appendChild(linkcover)
+    let element = document.createElement("a")
+    element.setAttribute("href",Elementlink)
+    count++;
+    element.textContent=count+":"+Elementlink;
+    linkcover.append(element)
+    
+ }
+
+
 
 const VideoSeater =document.querySelector(".row");
 
@@ -22,13 +23,13 @@ function renderVideos(datum){  //function to display results of video/playlist  
     <div class="card" >
         
         <iframe id="existing-iframe-example"
-        src="https://www.youtube.com/embed/${datum.id.videoId}?enablejsapi=1"
+        src=""
         frameborder="0"></iframe>
         <div class="card-body">
         <h5 class="card-title">${datum.snippet.title}</h5>
         <p class="card-text">${datum.snippet.channelTitle}</p>
-        <div class="dropdown">
-
+        
+        <button type="button" onclick="playlistcreate ()" value="https://www.youtube.com/embed/${datum.id.videoId}?enablejsapi=1" class="Addtoplaylist">Add to Playlist</button>
         <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
         Channel-Info
         </button>
@@ -45,25 +46,26 @@ function renderVideos(datum){  //function to display results of video/playlist  
 }
 
 
-document.querySelector("#searchGo").addEventListener("click",()=>{  //event to show results
-    VideoSeater.innerHTML=""
-    let Usersearch = document.querySelector("#searchbar").value;
-    const SearchUrl = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=6&key=AIzaSyDnsn3roe6g6MTdBGwnFCRxfbXDlb0771k&q=${Usersearch}`
-    fetch(SearchUrl)
-    .then((response)=>response.json())
-    .then((data)=>{
-        console.log(data)
-        const videos = data.items;
+// document.querySelector("#searchGo").addEventListener("click",()=>{  //event to show results
+//     VideoSeater.innerHTML=""
+//     let Usersearch = document.querySelector("#searchbar").value;
+//     const SearchUrl = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=6&key=AIzaSyDnsn3roe6g6MTdBGwnFCRxfbXDlb0771k&q=${Usersearch}`
+//     fetch(SearchUrl)
+//     .then((response)=>response.json())
+//     .then((data)=>{
+//         console.log(data)
+//         const videos = data.items;
 
         
-        for(var i of videos){
-            renderVideos(i);
-        }
-    })
+//         for(var i of videos){
+//             renderVideos(i);
+//         }
+//     })
     
-    .catch((error)=>console.log(error))
-})
+//     .catch((error)=>console.log(error))
+// })
 
 /////search function was done
 //// info was also done with the same request
 
+     

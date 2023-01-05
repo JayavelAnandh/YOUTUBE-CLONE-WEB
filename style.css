@@ -2,7 +2,6 @@
     width: 100%;
     height: 40rem;
     border-radius: 20px;
-    overflow: hidden;
     margin-bottom: 2rem;
     background-color: whitesmoke;
 }
@@ -15,4 +14,26 @@ iframe{
 }
 .row{
     padding: 1rem;
+}
+.dropdown-menu{
+    width: 300px;
+    overflow:scroll;
+}
+#signin{
+    display: inline ;
+}
+#signout{
+    display: inline;
+}
+#instructions{
+    font-size: x-small;
+    color: rgb(18, 178, 241);
+}
+.infos{
+    color: rgb(18, 178, 241);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: bisque;
+}
+body{
+    background-color: rgb(115, 201, 201);
 }
